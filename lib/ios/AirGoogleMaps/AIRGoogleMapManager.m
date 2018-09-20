@@ -39,6 +39,11 @@ static NSString *const RCTMapViewKey = @"MapView";
 
 RCT_EXPORT_MODULE()
 
++ (BOOL)requiresMainQueueSetup
+{
+  return YES;
+}
+
 - (UIView *)view
 {
   AIRGoogleMap *map = [AIRGoogleMap new];
